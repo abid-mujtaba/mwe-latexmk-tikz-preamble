@@ -1,0 +1,8 @@
+*.pdf
+*.log
+*.aux
+*.fmt
+*.fls
+.sconsign.dblite
+
+build/*         # Generated files. Ignore all.
