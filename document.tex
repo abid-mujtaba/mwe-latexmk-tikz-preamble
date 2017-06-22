@@ -2,8 +2,15 @@
 % The line above tells the latex compiler to look for a preamble.fmt file to be
 % loaded before this file is processed
 
+% We must now load the dynamic part of the preamble which cannot be precompiled
+\input{dynamic-preamble}
+
+
 \begin{document}
     This is the start of the document.
+
+    Here is a tikz image.
+    \input{diag/diagram}        % We place the diagram in a diag/ folder for the sake of organization
 
     This is the end of the document.
 \end{document}

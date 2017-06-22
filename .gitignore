@@ -4,5 +4,7 @@
 *.fmt
 *.fls
 .sconsign.dblite
+*.auxlock
 
-build/*         # Generated files. Ignore all.
+# Only contains generated files. Ignore all.
+build
