@@ -2,11 +2,11 @@
 
 This MWE shows three techniques for making your latex compilation super-fast, I mean unbelievably fast.
 
-### scons
+### latexmk
 
-This has more to do with saving you time compiling that latex document repeatedly, as many times as it takes to get the final output. 'scons' is the next-generation 'make'. All you will have to do is issue the 'scons' command once and it will compile only what is needed, as many times as is needed to get the output.
+This has more to do with saving you time compiling that latex document repeatedly, as many times as it takes to get the final output. 'latexmk' is a perl script that enhances 'make' for LaTeX compilation. All you will have to do is issue the 'make' command once and it will compile only what is needed, as many times as is needed to get the output.
 
-It is configured through the SConsruct file.
+It is configured through the Makefile.
 
 ### Tikz externalization
 
