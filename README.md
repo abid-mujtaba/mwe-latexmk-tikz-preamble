@@ -1,4 +1,4 @@
-## Minimum Working Example of LaTeX compilation using scons with tikz externalization and a pre-compiled preamble which includes the tikz package.
+## Minimum Working Example of LaTeX compilation using latexmk with tikz externalization and a pre-compiled preamble which includes the tikz package.
 
 This MWE shows three techniques for making your latex compilation super-fast, I mean unbelievably fast.
 
