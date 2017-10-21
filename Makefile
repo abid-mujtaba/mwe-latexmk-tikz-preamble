@@ -11,17 +11,17 @@ SOURCES=$(MAIN).tex dynamic-preamble.tex Makefile
 all: show
 
 
+# Use mupdf to display the created file. If already compiled the file is shown directly.
 show: $(MAIN).pdf
-	mupdf $(MAIN).pdf
+	mupdf $(MAIN).pdf &
 
 
-$(MAIN).pdf: $(SOURCES) preamble.fmt .refresh
+# latexmk uses pdflatex to compile tex files by default. To change specify the engine use -xelatex .etc
+$(MAIN).pdf: $(SOURCES) preamble.fmt
 	$(LATEXMK) $(LATEXMKOPT) $(TEXOPT) $(NONSTOP) $(MAIN)
 
-.refresh:
-	touch .refresh
 
-
+# Precompilation magic. Create preamble.fmt so that this step doesn't have to be repeated every time.
 preamble.fmt: preamble.tex
 	pdftex -ini -jobname=preamble "&pdflatex preamble.tex\dump"
 
