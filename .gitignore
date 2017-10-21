@@ -5,6 +5,5 @@
 *.fls
 .sconsign.dblite
 *.auxlock
-
-# Only contains generated files. Ignore all.
-build
+.refresh
+*.fdb_latexmk
